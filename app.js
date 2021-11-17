@@ -177,7 +177,8 @@ function moveDown(){
         if(squares[i+width].style.backgroundImage ===''){
             squares[i+width].style.backgroundImage = squares[i].style.backgroundImage
             squares[i].style.backgroundImage ='';
-            const firstRow =[0,1,2,3,4,5,6,7];
+        }
+        const firstRow =[0,1,2,3,4,5,6,7];
             const isFirstRow = firstRow.includes(i)
             if(isFirstRow && (squares[i].style.backgroundImage === '')){
                 // squares[i].style.backgroundImage = "grey"
@@ -185,8 +186,6 @@ function moveDown(){
                 let randomColor = Math.floor(Math.random()*candyColors.length);
             squares[i].style.backgroundImage = candyColors[randomColor]
             }
-
-        }
 
     }
 }
